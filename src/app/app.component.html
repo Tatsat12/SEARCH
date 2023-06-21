@@ -1,0 +1,28 @@
+<!-- <input type="text" [(ngModel)]="searchQuery" (keyup.enter)="performSearch()" placeholder="Enter your search query">
+<ul *ngIf="searchResults && searchResults.length > 0">
+  <li *ngFor="let result of searchResults">
+    {{ result.body }}
+  </li>
+</ul> -->
+<!-- <p *ngIf="!searchResults || searchResults.length === 0">No results found.</p> -->
+
+
+<input type="text" [(ngModel)]="searchQuery" (keyup.enter)="performSearch()" placeholder=" search ">
+<table *ngIf="searchResults && searchResults.length > 0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>first name</th>
+      <th>last name</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let result of searchResults">
+      <td>{{ result.id }}</td>
+      <td>{{ result.first_name }} {{ result.last_name }}</td>
+      <td>{{ result.gender }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <p *ngIf="!searchResults || searchResults.length === 0">No results found.</p> -->
